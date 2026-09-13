@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Club Closer Search · Pagaste la formación. Hiciste tu parte. Y nadie hizo la suya.</title>
+<meta name="description" content="El Club Closer Search te evalúa, te acredita con el sello Premium y te da todo lo necesario para ejercer tu trabajo: Guía de Ventas cerrada, embudo cerrado, informes ejecutivos, formación, soporte, acceso a las mejores ofertas y a todos los eventos del año. Solicita tu evaluación, sin coste.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#000; --panel:#0a0a0a; --panel-2:#101010; --ink:#f2efe8; --ink-2:#b9b4a8; --ink-3:#7a766c;
+  --gold:#c9a84c; --gold-2:#eed58a; --gold-3:#7d6528; --line:rgba(201,168,76,.18); --line-2:rgba(255,255,255,.08);
+  --serif:'Cormorant Garamond',Georgia,serif; --sans:'DM Sans',system-ui,sans-serif;
+  --max:1140px; --g:clamp(20px,4vw,48px); --r:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:300;line-height:1.65;-webkit-font-smoothing:antialiased;font-size:16px}
+::selection{background:var(--gold);color:#000}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--g)}
+h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.1;letter-spacing:-.01em}
+h1{font-size:clamp(38px,5vw,60px)}
+h2{font-size:clamp(30px,3.6vw,46px)}
+h3{font-size:24px;font-weight:600}
+h2 em,h1 em{font-style:italic;color:var(--gold)}
+p,li,td,.checks label span{text-align:justify;text-justify:inter-word;hyphens:none}
+.kicker{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:14px}
+.lead{font-size:17px;color:var(--ink-2);line-height:1.7}
+section{padding:clamp(64px,8vw,104px) 0;border-top:1px solid var(--line-2)}
+.head{max-width:760px;margin-bottom:44px}
+.head .lead{margin-top:16px}
+.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:8px;padding:15px 28px;font:500 15px var(--sans);text-decoration:none;cursor:pointer;border:1px solid transparent;transition:.2s;color:#000;background:var(--gold);white-space:nowrap}
+.btn:hover{background:var(--gold-2)}
+.btn.ghost{background:transparent;color:var(--ink);border-color:rgba(255,255,255,.22)}
+.btn.ghost:hover{border-color:var(--gold);color:var(--gold)}
+.btn.sm{padding:10px 18px;font-size:14px}
+.btn:disabled{opacity:.6;cursor:wait}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.card{background:var(--panel);border:1px solid var(--line-2);border-radius:var(--r);padding:28px}
+.grid{display:grid;gap:20px}
+.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:960px){.g3,.g4{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.g2,.g3,.g4{grid-template-columns:1fr}}
+
+/* NAV */
+.progress{position:fixed;top:0;left:0;height:2px;width:0;background:var(--gold);z-index:40}
+nav{position:sticky;top:0;z-index:30;background:rgba(0,0,0,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--line-2)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:76px;gap:20px}
+.logo{height:48px;width:auto;display:block}.logo.sm{height:38px}
+nav .links{display:flex;gap:22px;font-size:14px;color:var(--ink-2);white-space:nowrap}nav .links a{text-decoration:none}nav .links a:hover{color:var(--gold)}
+@media(max-width:1000px){nav .links{display:none}}
+.btn.sm .short{display:none}@media(max-width:520px){.btn.sm .long{display:none}.btn.sm .short{display:inline}.logo{height:40px}}
+
+/* HERO */
+.hero{padding:clamp(56px,7vw,96px) 0 clamp(48px,6vw,80px);border-top:0}
+.hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,4vw,56px);align-items:stretch}
+.hero h1{margin-top:18px}
+.hero .lead{margin-top:22px}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.hero .meta{margin-top:18px;font-size:13px;color:var(--ink-3);text-align:left}
+.proof{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;height:100%}
+.proof .top{padding:26px 30px;border-bottom:1px solid var(--line-2);display:flex;align-items:center;justify-content:space-between;gap:16px}
+.proof .top b{font-family:var(--serif);font-size:26px;font-weight:700}
+.proof .top span{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);border:1px solid var(--line);border-radius:6px;padding:5px 10px;white-space:nowrap}
+.proof ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;flex:1}
+.proof li{padding:30px 30px;border-bottom:1px solid var(--line-2);text-align:left;display:flex;flex-direction:column;justify-content:center}
+.proof li:nth-child(odd){border-right:1px solid var(--line-2)}
+.proof li:nth-last-child(-n+2){border-bottom:0}
+.proof li b{display:block;font-family:var(--serif);font-size:clamp(44px,4.4vw,60px);color:var(--gold);font-weight:700;line-height:1}
+.proof li span{display:block;font-size:15px;color:var(--ink-2);margin-top:8px;line-height:1.45;text-align:left}
+@media(max-width:900px){.hero .wrap{grid-template-columns:1fr}}
+
+/* ABANDONO */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,56px);align-items:start}
+@media(max-width:800px){.two{grid-template-columns:1fr}}
+.two p{color:var(--ink-2);margin-bottom:16px}
+.two p b{color:var(--ink);font-weight:500}
+.callout{background:var(--panel);border-left:3px solid var(--gold);border-radius:0 var(--r) var(--r) 0;padding:22px 26px;margin-top:8px}
+.callout p{color:var(--ink);font-family:var(--serif);font-size:22px;font-weight:600;line-height:1.3;margin:0}
+.callout p i{color:var(--gold)}
+
+/* ROLES */
+.role h3{margin-bottom:12px}
+.role p{color:var(--ink-2);font-size:15px;margin-bottom:10px}.role p:last-of-type{margin-bottom:22px}
+.card.role{display:flex;flex-direction:column}.role .q{margin-top:auto;padding-top:14px;border-top:1px solid var(--line-2);font-family:var(--serif);font-style:italic;font-size:19px;line-height:1.3;color:var(--gold);text-align:left;min-height:calc(14px + 2.6em)}
+
+/* PASOS */
+.step{position:relative;padding-top:28px;display:flex;flex-direction:column}
+.step .n{position:absolute;top:-1px;left:28px;background:var(--gold);color:#000;font:600 12px var(--sans);letter-spacing:.08em;padding:4px 10px;border-radius:0 0 6px 6px}
+.step h3{margin:10px 0 10px}
+.step p{color:var(--ink-2);font-size:15px;margin-bottom:18px}
+.step .tag{display:inline-block;align-self:flex-start;margin-top:auto;padding-top:5px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);border:1px solid var(--line);border-radius:6px;padding:4px 9px}
+.step.pay .tag{background:var(--gold);color:#000;border-color:var(--gold)}
+.note{margin-top:24px;padding:18px 22px;background:var(--panel-2);border:1px solid var(--line-2);border-radius:var(--r);color:var(--ink-2);font-size:15px}
+.note b{color:var(--ink);font-weight:500}
+
+/* INCLUYE */
+.inc h3{display:flex;align-items:center;gap:10px;margin-bottom:10px;font-size:21px}
+.inc h3 i{color:var(--gold);font-style:normal;font-size:18px}
+.inc p{color:var(--ink-2);font-size:15px}
+.inc .tag{display:inline-block;margin-bottom:12px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#000;background:var(--gold);padding:4px 9px;border-radius:6px;font-weight:500}
+.inc.new{border-color:var(--line);background:var(--panel-2)}
+.total{margin-top:20px;background:var(--panel-2);border:1px solid var(--gold);border-radius:var(--r);padding:26px 28px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center}
+.total b{font-family:var(--serif);font-size:24px;font-weight:700;display:block;margin-bottom:6px}
+.total p{color:var(--ink-2);font-size:15px;margin:0}
+.total .n{font-family:var(--serif);font-size:56px;color:var(--gold);font-weight:700;line-height:1;white-space:nowrap}
+.total .n small{font-size:.35em;color:var(--ink-2);font-weight:500}
+@media(max-width:640px){.total{grid-template-columns:1fr}}
+
+/* COMPARATIVA */
+.cmpwrap{overflow-x:auto;border:1px solid var(--line-2);border-radius:var(--r);background:var(--panel)}
+.cmp{width:100%;min-width:680px;border-collapse:collapse}
+.cmp th,.cmp td{padding:16px 18px;border-bottom:1px solid var(--line-2);font-size:14.5px;text-align:center;vertical-align:middle}
+.cmp th{font-weight:500;color:var(--ink-2);font-size:13px;letter-spacing:.06em;text-transform:uppercase}
+.cmp td:first-child,.cmp th:first-child{text-align:left;color:var(--ink)}
+.cmp th.cs,.cmp td.cs{background:rgba(201,168,76,.1)}
+.cmp th.cs{color:var(--gold)}
+.cmp .y{color:var(--gold);font-weight:500}.cmp .n{color:var(--ink-3)}
+.cmp tr:last-child td{border-bottom:0}
+
+/* OBJECIONES */
+.objs{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:800px){.objs{grid-template-columns:1fr}}
+.obj h3{font-size:20px;margin-bottom:10px}
+.obj p{color:var(--ink-2);font-size:15px}
+
+/* PRECIO */
+.price{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,56px);align-items:stretch}
+.price .left{display:flex;flex-direction:column;justify-content:space-between}
+@media(max-width:800px){.price{grid-template-columns:1fr}}
+.price .item{padding:22px 0;border-top:1px solid var(--line-2);flex:1;display:flex;flex-direction:column;justify-content:center}.price .item:last-child{border-bottom:1px solid var(--line-2)}
+.price .item b{display:block;font-family:var(--serif);font-size:26px;font-weight:600;margin-bottom:8px}
+.price .item p{color:var(--ink-2);font-size:16.5px;line-height:1.6}
+.pricecard{border-color:var(--gold);text-align:center;padding:36px 28px;display:flex;flex-direction:column}.pricecard ul{flex:1}
+.pricecard .n{font-family:var(--serif);font-size:72px;color:var(--gold);font-weight:700;line-height:1}
+.pricecard .n small{font-size:.32em;color:var(--ink-2);font-weight:500}
+.pricecard .after{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);margin-top:10px}
+.pricecard ul{list-style:none;text-align:left;margin:26px 0 0;border-top:1px solid var(--line-2)}
+.pricecard li{padding:11px 0;border-bottom:1px solid var(--line-2);font-size:14.5px;color:var(--ink-2);text-align:left;padding-left:20px;position:relative}
+.pricecard li::before{content:"";position:absolute;left:0;top:19px;width:7px;height:7px;background:var(--gold);transform:rotate(45deg)}
+.pricecard .btn{width:100%;margin-top:24px}
+.pricecard .cancel{font-size:12.5px;color:var(--ink-3);margin-top:14px}
+.member{margin-top:14px;font-size:13px;color:var(--ink-3)}.member a{color:var(--gold)}
+
+/* FORMULARIO */
+.formwrap{display:grid;grid-template-columns:1fr 1.25fr;gap:clamp(24px,4vw,56px);align-items:stretch}
+.aside{display:flex;flex-direction:column}.aside .warn{margin-top:auto}
+@media(max-width:900px){.formwrap{grid-template-columns:1fr}}
+.aside p{color:var(--ink-2);font-size:16.5px;line-height:1.65;margin-bottom:16px}
+.aside .warn{border-left:3px solid var(--gold);padding:14px 0 14px 18px;color:var(--ink-2);font-size:15.5px;line-height:1.6}
+form{background:var(--panel);border:1px solid var(--line-2);border-radius:var(--r);padding:clamp(22px,3vw,36px)}
+.wsteps{display:flex;gap:6px;margin-bottom:26px}
+.wsteps div{flex:1;height:3px;background:rgba(255,255,255,.08);border-radius:2px}.wsteps div.on{background:var(--gold)}
+.pane{display:none}.pane.on{display:block}
+.pane h3{margin-bottom:20px}
+.field{margin-bottom:14px}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.f2{grid-template-columns:1fr}}
+label{display:block;font-size:13px;color:var(--ink-2);margin-bottom:6px}
+label span{color:var(--gold)}
+input,select,textarea{width:100%;background:#000;border:1px solid rgba(255,255,255,.14);border-radius:8px;color:var(--ink);padding:13px 14px;font:300 15px var(--sans);transition:border .15s}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold)}
+select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23c9a84c' stroke-width='1.5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+select option{background:#0a0a0a}
+textarea{min-height:100px;resize:vertical}
+.inv{border-color:#c25b4a!important}
+.err{color:#e08a7a;font-size:13px;margin-top:8px;display:none}.err.on{display:block}
+.checks label{display:flex;gap:12px;align-items:flex-start;font-size:14px;color:var(--ink-2);margin-bottom:12px;cursor:pointer}
+.checks input{width:18px;height:18px;flex:none;margin-top:2px;accent-color:var(--gold)}
+.nav2{display:flex;justify-content:space-between;gap:12px;margin-top:22px}
+.hp{position:absolute;left:-9999px;opacity:0;height:0;width:0}
+.done{display:none;text-align:center;padding:26px 10px}.done.on{display:block}
+.done h3{font-size:32px;margin:16px 0 12px}.done h3 i{color:var(--gold)}
+.done p{color:var(--ink-2);max-width:48ch;margin:0 auto 10px;text-align:center}
+.done .ref{font-family:var(--serif);font-size:22px;color:var(--gold);letter-spacing:.14em;margin-top:18px}
+
+/* CIERRE */
+.close .card{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;border-color:var(--line);padding:34px 36px}
+.close p{color:var(--ink-2);margin-top:8px}
+@media(max-width:700px){.close .card{grid-template-columns:1fr}}
+footer{border-top:1px solid var(--line-2);padding:32px 0;font-size:13px;color:var(--ink-3)}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+footer a{text-decoration:none}footer a:hover{color:var(--gold)}
+</style>
+</head>
+<body>
+<div class="progress" id="prog"></div>
+
+<nav><div class="wrap">
+  <a class="brand" href="#"><img class="logo" src="data:image/png;base64,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" alt="Closer Search · Selección de talento de cierre"></a>
+  <div class="links"><a href="#abandono">El problema</a><a href="#entra">Cómo se entra</a><a href="#incluye">Qué incluye</a><a href="#compara">Compara</a><a href="#dudas">Dudas</a><a href="#precio">Membresía</a></div>
+  <a class="btn sm" href="#solicitud"><span class="long">Quiero entrar en el Club</span><span class="short">Entrar</span></a>
+</div></nav>
+
+<!-- HERO -->
+<header class="hero"><div class="wrap">
+  <div>
+    <div class="kicker">Club Closer Search · Para setters, closers, SDR y directores comerciales</div>
+    <h1>Pagaste la formación. Hiciste tu parte. <em>Y nadie hizo la suya.</em></h1>
+    <p class="lead">El Club Closer Search existe para acabar con eso. Te evaluamos, te acreditamos con el sello Premium y te damos todo lo necesario para ejercer tu trabajo: la herramienta, el proceso, los informes de cada oferta, la formación, el soporte y el acceso a las mejores ofertas. Tú solo vendes.</p>
+    <div class="cta"><a class="btn" href="#solicitud">Quiero entrar en el Club</a><a class="btn ghost" href="#incluye">Ver qué incluye</a></div>
+    <div class="meta">Membresía por evaluación. Sin coste hasta recibir el sello. Sin permanencia.</div>
+  </div>
+  <div class="proof">
+    <div class="top"><b>Closer Search en cifras</b><span>Datos reales</span></div>
+    <ul>
+      <li><b>50</b><span>empresas e infoproductores confían su venta a Closer Search</span></li>
+      <li><b>6</b><span>fases de evaluación antes de conceder el sello Premium</span></li>
+      <li><b>0 €</b><span>de coste hasta que tienes el sello en la mano</span></li>
+      <li><b>100 %</b><span>de nuestros ingresos vienen de que tú vendas, no de cobrarte</span></li>
+    </ul>
+  </div>
+</div></header>
+
+<!-- ABANDONO -->
+<section id="abandono"><div class="wrap">
+  <div class="head"><div class="kicker">El dolor del que nadie habla</div><h2>Después de la formación, <em>el silencio.</em></h2></div>
+  <div class="two">
+    <div>
+      <p>Pagaste. Hiciste todas las clases. Te dijeron que ya podías salir a vender y te dieron un diploma con tu nombre. Y al día siguiente, <b>nada</b>.</p>
+      <p>El grupo de la formación deja de escribir. Quien te formó tarda una semana en contestar, y luego deja de contestar. La "bolsa de trabajo" es un canal donde nunca entra nada que te encaje. Y tú, con toda la formación del mundo, sigues sin un solo proyecto, sin una sola llamada real y sin nadie que te diga cuál es el siguiente paso.</p>
+    </div>
+    <div>
+      <p>Eso no es que te haya ido mal. Eso tiene un nombre: <b>abandono</b>. Te formaron para cobrarte, no para colocarte. Y cuando el cobro terminó, terminó también el interés.</p>
+      <p>Muchos y muchas lo pasan en silencio porque da vergüenza decirlo: "he pagado miles de euros y no he vendido nada". Pero no es vergüenza tuya. Es el modelo.</p>
+      <div class="callout"><p>El Club Closer Search nace exactamente en ese punto: <i>el día después.</i></p></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- ROLES -->
+<section id="roles"><div class="wrap">
+  <div class="head"><div class="kicker">Y después del abandono, cada uno a lo suyo</div><h2>Cada persona, sin nadie, <em>con su versión.</em></h2></div>
+  <div class="grid g3">
+    <div class="card role"><h3>Si haces setting</h3><p>Pagaste una formación para aprender a agendar y te dejaron sin nadie, mandando mensajes a desconocidos por Instagram. Sin oferta clara, sin guion que funcione, sin nadie que te diga si lo haces bien.</p><p>Agendas para alguien que no te cuenta qué pasó en la llamada. Cobras poco, tarde o por objetivos que no dependen de ti.</p><div class="q">"Sé agendar. Lo que no tengo es a quién."</div></div>
+    <div class="card role"><h3>Si haces closing</h3><p>Cierras para infoproductores que te dan un Calendly y un PDF. Te cambian la comisión a mitad de mes. Te pagan tarde o no te pagan, y no tienes contrato que te proteja.</p><p>Cada proyecto nuevo es empezar de cero: aprender la oferta a ciegas, inventarte las respuestas a las objeciones y rezar para que los leads sean buenos.</p><div class="q">"Sé cerrar. Lo que no tengo es sistema."</div></div>
+    <div class="card role"><h3>Si diriges equipos</h3><p>Montas equipos con gente que se va a los dos meses. No hay proceso documentado, mides con intuición y pasas el día apagando fuegos en vez de dirigiendo.</p><p>Cuando alguien del equipo se va, se lleva todo lo que sabía, porque nada estaba escrito.</p><div class="q">"Sé dirigir. Lo que no tengo es con qué."</div></div>
+  </div>
+  <div class="note"><b>El problema no eres tú.</b> Es que nadie te ha dado el sistema. Las escuelas cobran por formarte y no tienen proyectos. Las agencias tienen proyectos y no te dan método. El Club Closer Search te da el sistema completo con el que trabajan los equipos de cierre de las empresas que confían en nosotros, y te lo da después de evaluarte, no después de cobrarte.</div>
+</div></section>
+
+<!-- CÓMO SE ENTRA -->
+<section id="entra"><div class="wrap">
+  <div class="head"><div class="kicker">Cómo se entra</div><h2>El sello no se compra. <em>Se gana.</em></h2><p class="lead">En el Club Closer Search nadie paga por entrar. Primero te evaluamos. Solo si pasas recibes el sello, y solo entonces activas tu membresía. Este es el orden, y no cambia.</p></div>
+  <div class="grid g4">
+    <div class="card step"><span class="n">PASO 1</span><h3>Solicitas</h3><p>Rellenas la solicitud de acceso al Club. Sin coste y sin compromiso.</p><span class="tag">Gratis</span></div>
+    <div class="card step"><span class="n">PASO 2</span><h3>Te evaluamos</h3><p>Gestión de Talento revisa tu perfil y te pasa por El Filtro de los 6. Si no pasas, no hay membresía y nadie te ha cobrado nada.</p><span class="tag">Gratis</span></div>
+    <div class="card step"><span class="n">PASO 3</span><h3>Recibes el sello</h3><p>Si pasas, Closer Search te acredita con el sello Premium de miembro. Es tu aval ante las empresas que confían en nosotros.</p><span class="tag">Acreditación</span></div>
+    <div class="card step pay"><span class="n">PASO 4</span><h3>Te equipas</h3><p>Activas tu membresía y recibes todo lo necesario para trabajar desde el primer día.</p><span class="tag">Membresía</span></div>
+  </div>
+  <div class="note"><b>Pagas por tener el equipo, no por la aceptación.</b> La aceptación ya la tienes antes de pagar un euro.</div>
+</div></section>
+
+<!-- QUÉ INCLUYE -->
+<section id="incluye"><div class="wrap">
+  <div class="head"><div class="kicker">Qué incluye la membresía</div><h2>Todo lo necesario para <em>ejercer tu trabajo.</em></h2></div>
+  <div class="grid g2">
+    <div class="card inc"><h3><i>◆</i>Guía de Ventas cerrada</h3><p>La herramienta que te acompaña en toda la fase de la venta: apertura, marco, diagnóstico, propuesta y cierre. Con las 28 objeciones resueltas, role play con inteligencia artificial y score de cierre en cada llamada.</p></div>
+    <div class="card inc"><h3><i>◆</i>Embudo de ventas cerrado</h3><p>El proceso completo de cada proyecto, del lead al cobro: qué hace el setter, qué hace el closer, cuándo, con qué mensaje y con qué seguimiento. Nada queda a la improvisación.</p></div>
+    <div class="card inc"><h3><i>◆</i>Informes ejecutivos de cada infoproducto</h3><p>El expediente de cada proyecto: oferta, cliente ideal, precios, formas de pago, dolores, objeciones y enlaces. Vendes desde el día uno como si llevaras meses.</p></div>
+    <div class="card inc"><h3><i>◆</i>Formación completa, incluida</h3><p>En la Guía de Ventas, en los informes ejecutivos y en el método de venta de Closer Search. Nunca se cobra aparte: quien está bien formado o formada vende más, y eso ya nos paga.</p></div>
+    <div class="card inc"><h3><i>◆</i>Soporte mientras trabajas</h3><p>Acompañamiento de las direcciones de Proyectos, Gestión de Talento y Legal durante cada proyecto. No estás sin nadie delante del cliente ni delante del contrato.</p></div>
+    <div class="card inc"><h3><i>◆</i>Canal exclusivo de ofertas y tickets altos</h3><p>Las convocatorias de las empresas e infoproductores que confían en Closer Search entran primero en el canal de miembros. Acceso directo, antes que nadie.</p></div>
+    <div class="card inc new"><span class="tag">Nuevo</span><h3><i>◆</i>Acceso a todos los eventos del año</h3><p>Todas las ediciones de La Gran Sala, los monográficos y las sesiones en directo con las cuatro direcciones. Ser miembro es tener la entrada a todo lo que Closer Search haga este año.</p></div>
+    <div class="card inc"><h3><i>◆</i>Sello Premium y La Sala</h3><p>Tu acreditación como profesional que ha superado la evaluación y la comunidad privada de quienes ya trabajan con el sistema, con prioridad en toda nueva selección.</p></div>
+  </div>
+  <div class="total"><div><b>Todo lo anterior, por</b><p>Solo después de recibir el sello. Sin permanencia. Cobras por rendimiento en cada proyecto, como siempre.</p></div><div class="n">50 €<small> / mes</small></div></div>
+</div></section>
+
+<!-- COMPARATIVA -->
+<section id="compara"><div class="wrap">
+  <div class="head"><div class="kicker">Compara</div><h2>Saca tú <em>la conclusión.</em></h2></div>
+  <div class="cmpwrap"><table class="cmp">
+    <thead><tr><th></th><th>Una escuela</th><th>Una agencia</th><th>Por tu cuenta</th><th class="cs">Club Closer Search</th></tr></thead>
+    <tbody>
+      <tr><td>Te forma</td><td class="y">Sí, cobrando</td><td class="n">No</td><td class="n">Tú mismo</td><td class="cs y">Sí, incluida</td></tr>
+      <tr><td>Te da proyectos reales</td><td class="n">No</td><td class="y">A veces</td><td class="n">Los que consigas</td><td class="cs y">Sí, de 50 empresas e infoproductores</td></tr>
+      <tr><td>Te da la herramienta de llamada</td><td class="n">No</td><td class="n">No</td><td class="n">No</td><td class="cs y">Guía de Ventas cerrada</td></tr>
+      <tr><td>Te da el proceso completo</td><td class="n">No</td><td class="n">Rara vez</td><td class="n">No</td><td class="cs y">Embudo cerrado</td></tr>
+      <tr><td>Te documenta cada oferta</td><td class="n">No</td><td class="n">No</td><td class="n">No</td><td class="cs y">Informe ejecutivo</td></tr>
+      <tr><td>Te da soporte y contrato</td><td class="n">No</td><td class="y">Depende</td><td class="n">No</td><td class="cs y">Proyectos, Talento y Legal</td></tr>
+      <tr><td>Te evalúa antes de cobrarte</td><td class="n">No</td><td class="n">No</td><td class="n">Nadie</td><td class="cs y">Sí, siempre</td></tr>
+      <tr><td>Sigue contigo el día después</td><td class="n">No</td><td class="n">Depende</td><td class="n">No</td><td class="cs y">Sí, en cada proyecto</td></tr>
+      <tr><td>Te paga por vender</td><td class="n">No</td><td class="y">Sí</td><td class="y">Sí</td><td class="cs y">Sí, por rendimiento</td></tr>
+    </tbody>
+  </table></div>
+</div></section>
+
+<!-- OBJECIONES -->
+<section id="dudas"><div class="wrap">
+  <div class="head"><div class="kicker">Lo que te estás preguntando</div><h2>Las dudas de verdad, <em>respondidas de verdad.</em></h2></div>
+  <div class="objs">
+    <div class="card obj"><h3>¿50 € al mes no es mucho?</h3><p>Depende de con qué lo compares. Con una formación de 2.000 € que te deja sin nadie, es nada. Con la comisión de un solo cierre de alto ticket, es una fracción. Y con seguir seis meses más sin proyecto, es lo más barato que vas a hacer este año. Además no pagas hasta tener el sello, y puedes darte de baja cuando quieras.</p></div>
+    <div class="card obj"><h3>Ya tengo formación. ¿Para qué quiero más?</h3><p>El Club no es formación. Es el sistema para ejercer: proyectos reales, la Guía que te lleva la llamada, el informe de cada oferta, el proceso y el soporte. La formación va incluida para que sepas usar todo eso, pero lo que compras es trabajar con red.</p></div>
+    <div class="card obj"><h3>No tengo experiencia en alto ticket.</h3><p>Por eso existe la evaluación. El Filtro de los 6 no mide cuántos años llevas, mide si tienes lo que hace falta. Si lo tienes, el sistema te pone a la altura desde el primer proyecto. Si no lo tienes todavía, te lo decimos y no te cobramos nada.</p></div>
+    <div class="card obj"><h3>¿Y si no paso la evaluación?</h3><p>No pasa nada y no pagas nada. Te decimos qué ha faltado y puedes volver a solicitarlo más adelante. El sello vale precisamente porque no lo recibe todo el mundo.</p></div>
+    <div class="card obj"><h3>¿Esto es una escuela más?</h3><p>Una escuela vive de cobrarte, y por eso el interés termina cuando termina el cobro. Closer Search vive de que vendas: cobramos a las empresas e infoproductores por rendimiento. Nuestro interés y el tuyo son el mismo, que cierres. Ninguna escuela puede decir eso, y ninguna puede prometerte que no te abandonará el día después.</p></div>
+    <div class="card obj"><h3>¿Tengo garantizado un proyecto?</h3><p>Tienes garantizado el acceso a los proyectos que abren las empresas que confían en Closer Search, antes que nadie y con el sistema para trabajarlos. La asignación depende del perfil que pida cada empresa y de tu evaluación. Lo que no vas a tener es lo de siempre: esperar sin saber.</p></div>
+  </div>
+</div></section>
+
+<!-- PRECIO -->
+<section id="precio"><div class="wrap">
+  <div class="head"><div class="kicker">La membresía</div><h2>Menos de lo que vale <em>un solo cierre.</em></h2></div>
+  <div class="price">
+    <div class="left">
+      <div class="item"><b>Primero el sello</b><p>No hay pago hasta que Gestión de Talento ha completado tu evaluación y tu acreditación. La membresía se activa con un enlace de pago seguro que recibes junto con tu sello.</p></div>
+      <div class="item"><b>Sin permanencia</b><p>Mes a mes. Si dejas de necesitarlo, te das de baja. Si vuelves, tu sello sigue siendo tuyo.</p></div>
+      <div class="item"><b>Cómo se paga</b><p>Con tarjeta, a través de una plataforma de pago segura, en una suscripción mensual que se renueva sola. Recibes tu factura cada mes y gestionas la baja desde tu propio acceso, sin tener que pedírselo a nadie.</p></div>
+      <div class="item"><b>Lo que no cambia</b><p>Sigues cobrando por rendimiento en cada proyecto, con contrato y con Legal detrás. La membresía te equipa; los proyectos te pagan.</p></div>
+    </div>
+    <div class="card pricecard">
+      <div class="n">50 €<small> / mes</small></div>
+      <div class="after">Solo después de recibir el sello</div>
+      <ul>
+        <li>Guía de Ventas cerrada</li><li>Embudo de ventas cerrado</li><li>Informes ejecutivos de cada infoproducto</li><li>Formación completa incluida</li><li>Soporte de Proyectos, Talento y Legal</li><li>Canal exclusivo de ofertas y tickets altos</li><li>Acceso a todos los eventos del año</li><li>Sello Premium y comunidad La Sala</li>
+      </ul>
+      <a class="btn" href="#solicitud">Quiero entrar en el Club</a>
+      <div class="cancel">Pago seguro por tarjeta · Sin permanencia · Baja en un clic</div>
+      <div class="member" id="memberLink" hidden>¿Ya tienes el sello? <a id="activar" href="#" target="_blank" rel="noopener">Activa tu membresía aquí</a></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- FORMULARIO -->
+<section id="solicitud"><div class="wrap">
+  <div class="formwrap">
+    <div class="aside">
+      <div class="kicker">Solicita tu evaluación</div>
+      <h2 style="font-size:clamp(28px,3vw,38px)">Si dentro de seis meses sigues sin nadie, <em>será porque quisiste.</em></h2>
+      <p style="margin-top:22px">Rellena la solicitud. Gestión de Talento revisa tu perfil y te contacta por correo y WhatsApp para iniciar la evaluación. Si pasas El Filtro de los 6, recibes el sello y el enlace para activar tu membresía.</p>
+      <p>Son tres pasos y menos de cinco minutos: quién eres, tu experiencia y la confirmación. Cuanto más nos cuentes de tu recorrido y de tus resultados, mejor podremos valorar tu perfil.</p>
+      <div class="warn">La solicitud y la evaluación no tienen coste. Los 50 €/mes solo se activan después de recibir el sello, y sin permanencia.</div>
+    </div>
+    <div>
+      <form id="f" novalidate>
+        <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+        <div class="wsteps"><div class="on"></div><div></div><div></div></div>
+        <div class="pane on" data-p="1">
+          <h3>Quién eres</h3>
+          <div class="f2"><div class="field"><label>Nombre <span>*</span></label><input name="nombre" required autocomplete="given-name"></div><div class="field"><label>Apellidos <span>*</span></label><input name="apellidos" required autocomplete="family-name"></div></div>
+          <div class="f2"><div class="field"><label>Correo electrónico <span>*</span></label><input type="email" name="email" required autocomplete="email"></div><div class="field"><label>WhatsApp (con prefijo) <span>*</span></label><input type="tel" name="whatsapp" required placeholder="+34 600 000 000"></div></div>
+          <div class="f2"><div class="field"><label>País <span>*</span></label><input name="pais" required></div><div class="field"><label>Ciudad</label><input name="ciudad"></div></div>
+          <div class="field"><label>Perfil de LinkedIn o Instagram <span>*</span></label><input name="perfil_redes" required placeholder="https://"></div>
+          <div class="err">Completa los campos marcados con asterisco.</div>
+          <div class="nav2"><span></span><button class="btn" type="button" data-next="2">Continuar</button></div>
+        </div>
+        <div class="pane" data-p="2">
+          <h3>Tu experiencia</h3>
+          <div class="f2">
+            <div class="field"><label>Rol principal <span>*</span></label><select name="rol" required><option value="">Elige</option><option>Setter</option><option>Closer</option><option>SDR</option><option>Director comercial</option><option>Director de proyecto</option><option>Otro perfil comercial</option></select></div>
+            <div class="field"><label>Años vendiendo <span>*</span></label><select name="experiencia" required><option value="">Elige</option><option>Menos de 1</option><option>De 1 a 3</option><option>De 3 a 5</option><option>Más de 5</option></select></div>
+          </div>
+          <div class="f2">
+            <div class="field"><label>Experiencia en alto ticket <span>*</span></label><select name="alto_ticket" required><option value="">Elige</option><option>Ninguna todavía</option><option>Algunos cierres</option><option>Trabajo en ello habitualmente</option><option>Dirijo equipos de alto ticket</option></select></div>
+            <div class="field"><label>Dónde te formaste</label><input name="escuela" placeholder="Escuela, mentoría o autodidacta"></div>
+          </div>
+          <div class="f2">
+            <div class="field"><label>Idiomas en los que vendes</label><input name="idiomas" placeholder="Español, inglés"></div>
+            <div class="field"><label>Disponibilidad <span>*</span></label><select name="disponibilidad" required><option value="">Elige</option><option>Inmediata</option><option>En menos de un mes</option><option>Más adelante</option></select></div>
+          </div>
+          <div class="f2">
+            <div class="field"><label>Facturas como autónomo o empresa <span>*</span></label><select name="autonomo" required><option value="">Elige</option><option>Sí</option><option>No, pero puedo</option><option>No</option></select></div>
+            <div class="field"><label>Resultados que puedas contar</label><input name="resultados" placeholder="Facturación, cierres, tickets"></div>
+          </div>
+          <div class="field"><label>Qué es lo que más te duele hoy <span>*</span></label><select name="dolor" required><option value="">Elige</option><option>Me formé y me dejaron sin nadie</option><option>No tengo proyecto</option><option>Tengo proyectos malos o que no pagan</option><option>Trabajo sin sistema ni herramienta</option><option>Dirijo sin proceso ni equipo estable</option><option>Otro</option></select></div>
+          <div class="field"><label>Por qué quieres entrar en el Club <span>*</span></label><textarea name="motivo" required></textarea></div>
+          <div class="err">Completa los campos marcados con asterisco.</div>
+          <div class="nav2"><button class="btn ghost" type="button" data-prev="1">Atrás</button><button class="btn" type="button" data-next="3">Continuar</button></div>
+        </div>
+        <div class="pane" data-p="3">
+          <h3>Confirmar</h3>
+          <div class="f2"><div class="field"><label>Cómo nos has conocido</label><select name="como_conociste"><option value="">Elige</option><option>LinkedIn</option><option>Instagram</option><option>Club de WhatsApp</option><option>Recomendación</option><option>Ya trabajo con Closer Search</option><option>Otro</option></select></div><div class="field"><label>Te recomienda alguien del Club</label><input name="recomendado_por" placeholder="Nombre, si lo hay"></div></div>
+          <div class="checks">
+            <label><input type="checkbox" required><span>Entiendo que la solicitud inicia una evaluación sin coste, que el sello Premium solo se concede si supero El Filtro de los 6 y que la membresía de 50 €/mes se activa únicamente después de recibir el sello, sin permanencia.</span></label>
+            <label><input type="checkbox" required><span>Acepto que Closer Search trate mis datos para gestionar mi solicitud, la evaluación y las comunicaciones del Club. Puedo revocarlo escribiendo a <a href="mailto:legal@closersearch.com">legal@closersearch.com</a>.</span></label>
+          </div>
+          <div class="err">Marca las dos casillas para continuar.</div>
+          <div class="nav2"><button class="btn ghost" type="button" data-prev="2">Atrás</button><button class="btn" type="submit" id="send">Solicitar mi evaluación</button></div>
+        </div>
+      </form>
+      <div class="done" id="done">
+        <h3>Solicitud <i>recibida</i>, <span class="dn"></span>.</h3>
+        <p>Gestión de Talento revisa tu perfil y te contacta por correo y WhatsApp para iniciar la evaluación. No hay ningún coste en esta fase.</p>
+        <div class="ref"></div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<!-- CIERRE -->
+<section class="close"><div class="wrap">
+  <div class="card"><div><h2>Te evaluamos, te acreditamos y te equipamos. <em>Tú solo vendes.</em></h2><p>Solicita tu evaluación hoy. No cuesta nada saber si tienes sitio.</p></div><a class="btn" href="#solicitud">Quiero entrar en el Club</a></div>
+</div></section>
+
+<footer><div class="wrap">
+  <a class="brand" href="#"><img class="logo sm" src="data:image/png;base64,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" alt="Closer Search"></a>
+  <div>Barcelona · <a href="mailto:talento@closersearch.com">talento@closersearch.com</a> · <a href="mailto:legal@closersearch.com">legal@closersearch.com</a></div>
+</div></footer>
+
+<script>
+/* ======= CONFIGURACIÓN: solo hay que rellenar estas dos líneas =======
+   endpoint: URL de tu formulario en Formspree (https://formspree.io/f/XXXXXXXX). Vacío = envío por correo.
+   stripe:   enlace de pago de la suscripción de 50 €/mes creado en Stripe (Payment Link). Vacío = no se muestra el botón "Activa tu membresía". */
+const CONFIG={endpoint:"https://formspree.io/f/mppzgwer",stripe:"",toEmail:"talento@closersearch.com"};
+
+const NAV=document.querySelector("nav");addEventListener("scroll",()=>{const h=document.documentElement;document.getElementById("prog").style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+"%";NAV.classList.toggle("scrolled",h.scrollTop>320)},{passive:true});
+if(CONFIG.stripe){document.getElementById("activar").href=CONFIG.stripe;document.getElementById("memberLink").hidden=false;}
+
+const form=document.getElementById("f"),panes=[...form.querySelectorAll(".pane")];
+function validPane(n){const pane=panes.find(p=>p.dataset.p==String(n));let ok=true;
+ pane.querySelectorAll("[required]").forEach(i=>{const bad=i.type==="checkbox"?!i.checked:!i.value.trim()||(i.type==="email"&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(i.value));i.classList.toggle("inv",bad);if(bad)ok=false});
+ pane.querySelector(".err").classList.toggle("on",!ok);return ok}
+function go(n){panes.forEach(p=>p.classList.toggle("on",p.dataset.p==String(n)));form.querySelectorAll(".wsteps div").forEach((d,i)=>d.classList.toggle("on",i<n));form.scrollIntoView({behavior:"smooth",block:"start"})}
+form.querySelectorAll("[data-next]").forEach(b=>b.addEventListener("click",()=>{const cur=+b.closest(".pane").dataset.p;if(validPane(cur))go(+b.dataset.next)}));
+form.querySelectorAll("[data-prev]").forEach(b=>b.addEventListener("click",()=>go(+b.dataset.prev)));
+form.querySelectorAll("input,select,textarea").forEach(i=>i.addEventListener("input",()=>i.classList.remove("inv")));
+form.addEventListener("submit",async e=>{e.preventDefault();if(!validPane(3))return;
+ const data={};new FormData(form).forEach((v,k)=>{if(v)data[k]=v});
+ const ref="CS-"+new Date().getFullYear().toString().slice(-2)+"-"+Math.random().toString(36).slice(2,6).toUpperCase();
+ Object.assign(data,{tipo:"club",referencia:ref,_subject:"Solicitud de acceso · Club Closer Search · "+ref,fecha_solicitud:new Date().toISOString()});
+ const btn=document.getElementById("send");btn.disabled=true;btn.textContent="Enviando…";
+ try{
+  if(CONFIG.endpoint){const r=await fetch(CONFIG.endpoint,{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},body:JSON.stringify(data)});if(!r.ok)throw 0}
+  else{const body=Object.entries(data).filter(([k])=>!k.startsWith("_")).map(([k,v])=>k.replace(/_/g," ")+": "+v).join("\n");location.href="mailto:"+CONFIG.toEmail+"?subject="+encodeURIComponent(data._subject)+"&body="+encodeURIComponent(body)}
+  const d=document.getElementById("done");d.querySelector(".dn").textContent=data.nombre;d.querySelector(".ref").textContent="CS · "+ref.slice(6);
+  form.style.display="none";d.classList.add("on");d.scrollIntoView({behavior:"smooth",block:"center"});
+ }catch(_){btn.disabled=false;btn.textContent="Solicitar mi evaluación";const er=panes[2].querySelector(".err");er.textContent="No se ha podido enviar. Escríbenos a "+CONFIG.toEmail+" con tus datos y te respondemos igual.";er.classList.add("on")}
+});
+</script>
+</body>
+</html>
